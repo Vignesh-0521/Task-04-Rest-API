@@ -1,0 +1,11 @@
+<div class="container mt-4">
+    <h2 class="mb-3">Comments</h2>
+    <mat-card *ngFor="let comment of comments" class="mb-2">
+      <mat-card-content>
+        <strong>User ID:</strong> {{ comment.userId }} <br />
+        <strong>Comment:</strong> {{ comment.text }} <br />
+        <small>{{ comment.date | date:'short' }}</small>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

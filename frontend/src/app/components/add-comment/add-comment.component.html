@@ -1,0 +1,19 @@
+<div class="container mt-4">
+    <mat-card>
+      <form [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+        <h3>Add New Comment</h3>
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>User ID</mat-label>
+          <input matInput formControlName="userId" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>Comment</mat-label>
+          <textarea matInput formControlName="text"></textarea>
+        </mat-form-field>
+  
+        <button mat-raised-button color="accent" type="submit" [disabled]="commentForm.invalid">Submit</button>
+      </form>
+    </mat-card>
+  </div>
+  
